@@ -4,8 +4,7 @@
   </div>
 </template>
 <script>
-// import "@/style/index.less"
 </script>
-<style>
+<style lang="less">
 
 </style>
