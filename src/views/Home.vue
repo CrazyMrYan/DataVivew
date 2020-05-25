@@ -154,7 +154,11 @@ export default {
 </script>
 <style lang="less" scoped>
 .data_vivew_center{
-	flex: 1;
+  // flex: 1;
+  
+  height: 70vh;
+  padding-top: 60px;
+  width: 40%;
 }
 .Title {
   text-align: center;
@@ -164,7 +168,7 @@ export default {
   font-size: 20px;
 }
 .data_vivew_left {
-  width: 25%;
+  width: 30%;
   height: 100vh;
   box-sizing: border-box;
   padding: 50px 30px;

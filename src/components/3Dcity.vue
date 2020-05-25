@@ -1,6 +1,9 @@
 <template>
   <div>
-    <dv-flyline-chart-enhanced :config="config" style="width:100%;height:100%;" />
+    <dv-border-box-7 style="padding: 20px;box-sizing: border-box;">
+      <dv-flyline-chart-enhanced :config="config" style="width:100%;height:600px;" ></dv-flyline-chart-enhanced>
+    </dv-border-box-7>
+    
   </div>
 </template>
 
@@ -12,7 +15,18 @@ export default {
         points: [
           {
             name: "郑州",
-            coordinate: [0.48, 0.35]
+            coordinate: [0.48, 0.35],
+            halo: {
+              show: true
+            },
+            icon: {
+              src: "http://datav.jiaminghi.com/img/flylineChart/mapCenterPoint.png",
+              width: 30,
+              height: 30
+            },
+            text: {
+              show: false
+            }
           },
           {
             name: "新乡",
@@ -40,7 +54,11 @@ export default {
           },
           {
             name: "周口",
-            coordinate: [0.62, 0.55]
+            coordinate: [0.62, 0.55],
+            halo: {
+              show: true,
+              color: "#8378ea"
+            }
           },
           {
             name: "漯河",
@@ -48,7 +66,11 @@ export default {
           },
           {
             name: "南阳",
-            coordinate: [0.37, 0.66]
+            coordinate: [0.37, 0.66],
+            halo: {
+              show: true,
+              color: "#37a2da"
+            }
           },
           {
             name: "信阳",
@@ -97,36 +119,16 @@ export default {
             target: "郑州"
           },
           {
-            source: "许昌",
-            target: "郑州"
-          },
-          {
-            source: "平顶山",
-            target: "郑州"
-          },
-          {
-            source: "洛阳",
-            target: "郑州"
-          },
-          {
             source: "周口",
-            target: "郑州"
-          },
-          {
-            source: "漯河",
-            target: "郑州"
+            target: "郑州",
+            color: "#fb7293",
+            width: 2
           },
           {
             source: "南阳",
-            target: "郑州"
-          },
-          {
-            source: "信阳",
-            target: "郑州"
-          },
-          {
-            source: "驻马店",
-            target: "郑州"
+            target: "郑州",
+            color: "#fb7293",
+            width: 2
           },
           {
             source: "济源",
@@ -151,9 +153,47 @@ export default {
           {
             source: "安阳",
             target: "郑州"
+          },
+          {
+            source: "许昌",
+            target: "南阳",
+            color: "#37a2da"
+          },
+          {
+            source: "平顶山",
+            target: "南阳",
+            color: "#37a2da"
+          },
+          {
+            source: "洛阳",
+            target: "南阳",
+            color: "#37a2da"
+          },
+          {
+            source: "驻马店",
+            target: "周口",
+            color: "#8378ea"
+          },
+          {
+            source: "信阳",
+            target: "周口",
+            color: "#8378ea"
+          },
+          {
+            source: "漯河",
+            target: "周口",
+            color: "#8378ea"
           }
         ],
-        bgImgSrc: "../images/back.png"
+        icon: {
+          show: true,
+          src: "http://datav.jiaminghi.com/img/flylineChart/mapPoint.png"
+        },
+        text: {
+          show: true
+        },
+        k: 0.5,
+        bgImgSrc: "http://datav.jiaminghi.com/img/flylineChart/map.jpg"
       }
     };
   }
